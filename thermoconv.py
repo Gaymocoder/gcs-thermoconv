@@ -20,7 +20,7 @@ def read_number(prompt):
             return fahrenheit_to_celsius(float(raw[:-1]))
         return float(raw)
     except ValueError:
-        print("Нужно ввести число")
+        print("Ошибка: введите число, например 36,6")
         raise SystemExit(1)
 
 
