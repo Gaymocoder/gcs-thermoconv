@@ -2,7 +2,7 @@ F_RATIO = 5 / 9
 
 
 def celsius_to_fahrenheit(c):
-    return round(c * F_RATIO + 32, 2)
+    return round(c / F_RATIO + 32, 2)
 
 
 def fahrenheit_to_celsius(f):
