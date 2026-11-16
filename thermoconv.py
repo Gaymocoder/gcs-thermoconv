@@ -25,10 +25,10 @@ def read_number(prompt):
 
 
 def main():
-    c = read_number("Температура (например, 36,6 или 98F): ")
-    f = celsius_to_fahrenheit(c)
-    print(f"Результат: {c}°C → {f}°F")
-    print(f"{c} °C = {celsius_to_kelvin(c)} K")
+    celsius = read_number("Температура (например, 36,6 или 98F): ")
+    f = celsius_to_fahrenheit(celsius)
+    print(f"Результат: {celsius}°C → {f}°F")
+    print(f"{celsius} °C = {celsius_to_kelvin(celsius)} K")
 
 
 if __name__ == "__main__":
