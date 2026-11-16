@@ -21,8 +21,12 @@ def read_number(prompt):
         raise SystemExit(1)
 
 
-c = read_number("Температура (например, 36,6 или 98F): ")
+def main():
+    c = read_number("Температура (например, 36,6 или 98F): ")
+    f = celsius_to_fahrenheit(c)
+    print(f"Результат: {c}°C → {f}°F")
+    print(f"{c} °C = {celsius_to_kelvin(c)} K")
 
-f = celsius_to_fahrenheit(c)
-print(f"Результат: {c}°C → {f}°F")
-print(f"{c} °C = {celsius_to_kelvin(c)} K")
+
+if __name__ == "__main__":
+    main()
