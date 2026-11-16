@@ -11,14 +11,17 @@ def celsius_to_kelvin(c):
 
 
 def read_number(prompt):
+    raw = input(prompt).strip().replace(",", ".")
     try:
-        return float(input(prompt).replace(",", "."))
+        if raw.upper().endswith("F"):
+            return fahrenheit_to_celsius(float(raw[:-1]))
+        return float(raw)
     except ValueError:
         print("Нужно ввести число")
         raise SystemExit(1)
 
 
-c = read_number("Температура в °C: ")
+c = read_number("Температура (например, 36,6 или 98F): ")
 
 f = celsius_to_fahrenheit(c)
 print(f"Результат: {c}°C → {f}°F")
