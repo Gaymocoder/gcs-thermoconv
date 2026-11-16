@@ -6,11 +6,15 @@ def celsius_to_kelvin(c):
     return round(c + 273.15, 2)
 
 
-try:
-    c = float(input("Температура в °C: ").replace(",", "."))
-except ValueError:
-    print("Нужно ввести число")
-    raise SystemExit(1)
+def read_number(prompt):
+    try:
+        return float(input(prompt).replace(",", "."))
+    except ValueError:
+        print("Нужно ввести число")
+        raise SystemExit(1)
+
+
+c = read_number("Температура в °C: ")
 
 f = celsius_to_fahrenheit(c)
 print(f"Результат: {c}°C → {f}°F")
