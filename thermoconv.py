@@ -13,6 +13,10 @@ def celsius_to_kelvin(c):
     return round(c + 273.15, 2)
 
 
+def celsius_to_reaumur(c):
+    return round(c * 0.8, 2)
+
+
 def read_number(prompt):
     raw = input(prompt).strip().replace(",", ".")
     try:
@@ -29,6 +33,7 @@ def main():
     f = celsius_to_fahrenheit(celsius)
     print(f"Результат: {celsius}°C → {f}°F")
     print(f"{celsius} °C = {celsius_to_kelvin(celsius)} K")
+    print(f"{celsius} °C = {celsius_to_reaumur(celsius)} °Ré")
 
 
 if __name__ == "__main__":
