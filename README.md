@@ -2,6 +2,8 @@
 
 Консольная программа переводит температуру из градусов Цельсия в Фаренгейты.
 
+Получить проект: `git clone https://github.com/Gaymocoder/gcs-thermoconv.git`
+
 Запуск из папки проекта: `python3 thermoconv.py`
 
 Пример работы:
